@@ -4,7 +4,12 @@ import '../config/api_config.dart';
 import '../models/user_model.dart';
 
 class AuthService {
-  final Dio _dio = Dio(BaseOptions(baseUrl: ApiConfig.baseUrl));
+  final Dio _dio = Dio(BaseOptions(
+    baseUrl: ApiConfig.baseUrl,
+    connectTimeout: const Duration(seconds: 10),
+    receiveTimeout: const Duration(seconds: 10),
+    sendTimeout: const Duration(seconds: 10),
+  ));
   final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
   // Simpan token

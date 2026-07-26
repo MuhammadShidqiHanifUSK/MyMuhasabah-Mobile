@@ -1,5 +1,5 @@
 class ApiConfig {
-  static const String baseUrl = 'http://192.168.56.1:8000/api';
+  static const String baseUrl = 'http://10.180.134.109:8000/api';
 
   // Endpoints Auth
   static const String register = '/register';

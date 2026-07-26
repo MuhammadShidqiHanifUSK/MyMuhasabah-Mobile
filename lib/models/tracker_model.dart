@@ -29,7 +29,7 @@ class TrackerModel {
   final bool dzikirPetang;
   final bool puasaSunnah;
   final bool sedekah;
-  final bool membantуOrang;
+  final bool membantuOrang;
   final bool silaturahmi;
 
   // Amal Keburukan
@@ -69,7 +69,7 @@ class TrackerModel {
     required this.dzikirPetang,
     required this.puasaSunnah,
     required this.sedekah,
-    required this.membantуOrang,
+    required this.membantuOrang,
     required this.silaturahmi,
     required this.berkataKotor,
     required this.berbohong,
@@ -109,7 +109,7 @@ class TrackerModel {
       dzikirPetang: json['dzikir_petang'] ?? false,
       puasaSunnah: json['puasa_sunnah'] ?? false,
       sedekah: json['sedekah'] ?? false,
-      membantуOrang: json['membantu_orang'] ?? false,
+      membantuOrang: json['membantu_orang'] ?? false,
       silaturahmi: json['silaturahmi'] ?? false,
       berkataKotor: json['berkata_kotor'] ?? false,
       berbohong: json['berbohong'] ?? false,

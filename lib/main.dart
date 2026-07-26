@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'providers/auth_provider.dart';
 import 'providers/muhasabah_provider.dart';
 import 'providers/tracker_provider.dart';
 import 'screens/auth/splash_screen.dart';
 
-void main() {
-  runApp(const MyMuhasabahApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id', null);
+  runApp(const MyApp());
 }
 
-class MyMuhasabahApp extends StatelessWidget {
-  const MyMuhasabahApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

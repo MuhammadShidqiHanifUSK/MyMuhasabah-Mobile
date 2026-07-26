@@ -38,7 +38,7 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
   bool _dzikirPetang = false;
   bool _puasaSunnah = false;
   bool _sedekah = false;
-  bool _membantуOrang = false;
+  bool _membantuOrang = false;
   bool _silaturahmi = false;
 
   // Amal Keburukan
@@ -95,7 +95,7 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
         _dzikirPetang = tracker.dzikirPetang;
         _puasaSunnah = tracker.puasaSunnah;
         _sedekah = tracker.sedekah;
-        _membantуOrang = tracker.membantуOrang;
+        _membantuOrang = tracker.membantuOrang;
         _silaturahmi = tracker.silaturahmi;
         _berkataKotor = tracker.berkataKotor;
         _berbohong = tracker.berbohong;
@@ -136,7 +136,7 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
       'dzikir_petang': _dzikirPetang,
       'puasa_sunnah': _puasaSunnah,
       'sedekah': _sedekah,
-      'membantu_orang': _membantуOrang,
+      'membantu_orang': _membantuOrang,
       'silaturahmi': _silaturahmi,
       'berkata_kotor': _berkataKotor,
       'berbohong': _berbohong,
@@ -273,7 +273,7 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
                         _buildCheckItem("Dzikir Petang", _dzikirPetang, (v) => setState(() => _dzikirPetang = v!)),
                         _buildCheckItem("Puasa Sunnah", _puasaSunnah, (v) => setState(() => _puasaSunnah = v!)),
                         _buildCheckItem("Sedekah", _sedekah, (v) => setState(() => _sedekah = v!)),
-                        _buildCheckItem("Membantu Orang", _membantуOrang, (v) => setState(() => _membantуOrang = v!)),
+                        _buildCheckItem("Membantu Orang", _membantuOrang, (v) => setState(() => _membantuOrang = v!)),
                         _buildCheckItem("Silaturahmi", _silaturahmi, (v) => setState(() => _silaturahmi = v!)),
                       ],
                     ),
