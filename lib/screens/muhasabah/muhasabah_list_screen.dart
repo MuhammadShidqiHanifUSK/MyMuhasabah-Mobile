@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import '../../providers/muhasabah_provider.dart';
 import '../../models/muhasabah_model.dart';
 import 'muhasabah_create_screen.dart';
@@ -144,8 +145,10 @@ class _MuhasabahListScreenState extends State<MuhasabahListScreen> {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 4),
-                  Text(item.tanggal,
-                      style: GoogleFonts.inter(fontSize: 11, color: const Color(0xFF6B7280))),
+                  Text(
+                      DateFormat('EEEE, d MMMM yyyy', 'id').format(DateTime.parse(item.tanggal)),
+                      style: GoogleFonts.inter(fontSize: 11, color: const Color(0xFF6B7280)),
+                  ),
                   const SizedBox(height: 4),
                   Text(item.content,
                       style: GoogleFonts.inter(fontSize: 12, color: const Color(0xFF6B7280)),

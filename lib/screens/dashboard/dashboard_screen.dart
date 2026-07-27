@@ -403,7 +403,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(item['title'], style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 13), maxLines: 1, overflow: TextOverflow.ellipsis),
-                        Text(item['tanggal'], style: GoogleFonts.inter(fontSize: 11, color: const Color(0xFF6B7280))),
+                        Text(
+                            DateFormat('EEEE, d MMMM yyyy', 'id').format(DateTime.parse(item['tanggal'])),
+                            style: GoogleFonts.inter(fontSize: 11, color: const Color(0xFF6B7280)),
+                        ),
                       ],
                     ),
                   ),
