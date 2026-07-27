@@ -68,6 +68,12 @@ class TrackerProvider extends ChangeNotifier {
 
   // Cek apakah tanggal sudah diisi
   bool isTanggalTerisi(String tanggal) {
-    return _trackers.any((t) => t.tanggal == tanggal);
+    return _trackers.any((t) {
+      final tDate = DateTime.parse(t.tanggal).toLocal();
+      final cDate = DateTime.parse(tanggal).toLocal();
+      return tDate.year == cDate.year &&
+            tDate.month == cDate.month &&
+            tDate.day == cDate.day;
+    });
   }
 }
