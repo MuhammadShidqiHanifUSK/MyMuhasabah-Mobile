@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import '../../models/muhasabah_model.dart';
 import '../../providers/muhasabah_provider.dart';
 import 'muhasabah_edit_screen.dart';
@@ -92,7 +93,7 @@ class MuhasabahDetailScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    muhasabah.tanggal,
+                    DateFormat('EEEE, d MMMM yyyy', 'id').format(DateTime.parse(muhasabah.tanggal)),
                     style: GoogleFonts.inter(fontSize: 13, color: const Color(0xFF6B7280)),
                   ),
                   if (muhasabah.mood != null)
