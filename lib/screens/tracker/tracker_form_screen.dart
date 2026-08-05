@@ -178,9 +178,27 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
         foregroundColor: const Color(0xFF111827),
         elevation: 0,
       ),
+      bottomNavigationBar: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: SizedBox(
+            height: 50,
+            child: ElevatedButton(
+              onPressed: _submit,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF059669),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              child: Text('💾 Simpan Tracker', style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 15)),
+            ),
+          ),
+        ),
+      ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFF059669)))
           : SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -300,23 +318,7 @@ class _TrackerFormScreenState extends State<TrackerFormScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
-
-                  // Tombol Simpan
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: _submit,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF059669),
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      ),
-                      child: Text('💾 Simpan Tracker', style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 15)),
-                    ),
-                  ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 8),
                 ],
               ),
             ),
