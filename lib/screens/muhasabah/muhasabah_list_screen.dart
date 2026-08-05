@@ -82,6 +82,7 @@ class _MuhasabahListScreenState extends State<MuhasabahListScreen> {
                   color: const Color(0xFF059669),
                   onRefresh: () => provider.fetchMuhasabahs(refresh: true),
                   child: ListView.builder(
+                    physics: const BouncingScrollPhysics(),
                     controller: _scrollController,
                     padding: const EdgeInsets.all(16),
                     itemCount: provider.muhasabahs.length + (provider.hasMoreData ? 1 : 0),

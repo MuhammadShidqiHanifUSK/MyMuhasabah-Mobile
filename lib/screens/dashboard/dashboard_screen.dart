@@ -125,7 +125,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       color: const Color(0xFF059669),
       onRefresh: _fetchDashboard,
       child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

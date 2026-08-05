@@ -70,6 +70,7 @@ class _TrackerCalendarScreenState extends State<TrackerCalendarScreen> {
         ],
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
